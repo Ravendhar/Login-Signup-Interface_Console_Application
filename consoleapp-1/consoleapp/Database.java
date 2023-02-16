@@ -7,10 +7,10 @@ public class Database extends HomePage {
 		
 	public void datacomparision() throws SQLException {
 		
- 	 String query="select * from users where username= ? and password = ? ;";
+ 	String query="select * from users where username= ? and password = ? ;";
  	 
-	 Connection connect=DBConnection.getConnect();
-     PreparedStatement preparestatement=connect.prepareStatement(query);
+	Connection connect=DBConnection.getConnect();
+     	PreparedStatement preparestatement=connect.prepareStatement(query);
      
      preparestatement.setString(1, HomePage.username);
      preparestatement.setInt(2, HomePage.password);
